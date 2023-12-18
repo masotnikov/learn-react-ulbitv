@@ -1,12 +1,12 @@
 import PostItem from "./PostItem";
 
 
-const PostList = ({posts , title}) => {
+const PostList = ({posts , title, remove}) => {
   return (
     <div>
       <h1 style={{textAlign: 'center'}}>{title}</h1>
       {posts.map((item, index) => (
-        <PostItem number={index + 1} key={item.id} post={item}/>
+        <PostItem remove={remove} number={index + 1} key={item.id} post={item}/>
       ))}
     </div>
   )
