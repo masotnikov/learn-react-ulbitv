@@ -21,7 +21,7 @@ function App() {
 
   const sortPosts = (sort) => {
     setSelectedSort(sort);
-    setPosts()
+    setPosts([...posts].sort((a,b) => a[sort].localeCompare(b[sort])))
 
   }
 
