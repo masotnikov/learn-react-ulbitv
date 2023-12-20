@@ -35,17 +35,12 @@ function App() {
     setPosts(posts.filter(p => p.id !== post.id))
   }
 
-  return (
+    return (
     <div className="App">
       <PostForm create={createPost}/>
       <hr style={{margin: '15px 0'}}/>
       <PostFilter filter={filter} setFilter={setFilter}/>
-      {sortedAndSearchedPosts.length !== 0
-        ?
-        <PostList remove={removePost} posts={sortedAndSearchedPosts} title={'Список постов 1'}/>
-        :
-        <h1 style={{textAlign: "center"}}>Посты не найдены</h1>
-      }
+      <PostList remove={removePost} posts={sortedAndSearchedPosts} title={'Список постов 1'}/>
     </div>
   );
 }
