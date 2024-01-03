@@ -2,7 +2,6 @@ import {useMemo} from "react";
 
 export const usePagination = (totalPages) => {
   return useMemo(() => {
-    console.log('Вычисления usePagination');
     let result = [];
     for (let i = 0; i < totalPages; i++) {
       result.push(i + 1);
